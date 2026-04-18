@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Hide scrollbar globally (all browsers) ── */
+html,
+body,
+#root {
+  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;       /* IE / Edge */
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar {
+  display: none;                  /* Chrome, Safari, Opera */
+}
+
 @layer base {
   :root {
     --background: 240 33% 99%;
@@ -32,7 +45,7 @@
     --input: 220 13% 91%;
     --ring: 239 100% 58%;
 
-    --radius: 1rem;
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
